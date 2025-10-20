@@ -10,7 +10,7 @@ def main():
     """Entry point for the find-flights-mcp application."""
     logger.info("Starting Find Flights MCP server")
     try:
-        mcp.run(transport='stdio')
+        mcp.run(transport='http', host='0.0.0.0', port=8000)
         logger.info("Server initialized successfully")
     except Exception as e:
         logger.error(f"Server error occurred: {str(e)}", exc_info=True)
