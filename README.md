@@ -1,6 +1,16 @@
 # Find Flights MCP Server
 MCP server for searching and retrieving flight information using Duffel API.
 
+## Fork
+
+This is a fork of [flights-mcp](https://github.com/ravinahp/flights-mcp) by [ravinahp](https://github.com/ravinahp).
+
+I did the following changes to the original code:
+
+- Change MCP server to use SSE instead of stdio
+- Set host to `0.0.0.0` and port to `8000` (needed for Render.com deployment)
+- Add documentation for deployment to Render.com
+
 ## How it Works
 ![Flight](https://github.com/user-attachments/assets/3ee342a4-c2da-4d4e-a43c-79ae4590d893)
 
@@ -133,6 +143,16 @@ uv sync
 uv build
 ```
 This will create distributions in the `dist/` directory.
+
+### Deploying to Render.com
+
+1. Fork this repository
+2. New "Web Service"
+3. Select your forked repository
+4. Language: Select "Python 3"
+5. Change "Start Command" to "uv run flights-mcp"
+6. Add `DUFFEL_API_KEY_LIVE` as environment variable
+7. (Optional) Set instance type to free
 
 ## Debugging
 For the best debugging experience, use the MCP Inspector:
