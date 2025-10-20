@@ -18,7 +18,7 @@ from ..api import DuffelClient
 logger = logging.getLogger(__name__)
 
 # Initialize FastMCP server and API client
-mcp = FastMCP("find-flights-mcp")
+mcp = FastMCP("find-flights-mcp", host="0.0.0.0", port=8000)
 flight_client = DuffelClient(logger)
 
 
