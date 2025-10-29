@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: flights-mcp
+    runtime: docker
+    plan: free
+    autoDeploy: false
+    envVars:
+      - key: DUFFEL_API_KEY_LIVE
+        sync: false

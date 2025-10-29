@@ -146,13 +146,10 @@ This will create distributions in the `dist/` directory.
 
 ### Deploying to Render.com
 
-1. Fork this repository
-2. New "Web Service"
-3. Select your forked repository
-4. Language: Select "Python 3"
-5. Change "Start Command" to "uv run flights-mcp"
-6. Add `DUFFEL_API_KEY_LIVE` as environment variable
-7. (Optional) Set instance type to free
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/nilsreichardt/flights-mcp)
+
+1. Click the button above
+2. Enter your `DUFFEL_API_KEY_LIVE`
 
 ## Debugging
 For the best debugging experience, use the MCP Inspector:
